@@ -14,3 +14,12 @@
 // it is expected to see failures for these tests:
 // "Frieda|Francis should be inside an object frieda|francis".
 // All the other tests should work.
+
+const francis = {age: 23, name: "Francis"};
+const frieda = {age: 22, name: "Frieda"};
+
+let canFrancisDrinkAlcohol = false;
+let canFriedaDrinkAlcohol = true;
+
+if (francis.age > 18) { canFrancisDrinkAlcohol = true; }
+if (frieda.age < 18) { canFriedaDrinkAlcohol = false; }

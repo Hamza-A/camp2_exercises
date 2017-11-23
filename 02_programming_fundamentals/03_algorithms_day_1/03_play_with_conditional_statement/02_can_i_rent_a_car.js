@@ -17,3 +17,16 @@ const bonus = driverData.bonus;
 let canRentACar;
 
 // Your code here:
+
+//the driver has (at least) a B;
+//driver has been licensed for at least 2 years;
+//he must never have had any accidents or have re-achieved a bonus of 0.7.
+if (driverLicense >= "B" &&
+    licenceIssued <= 2015 &&
+    (numberOfAccident===0 || bonus >= 0.7 )) {
+  canRentACar = true;
+} else {
+  canRentACar = false;
+}
+// Your code here:
+console.log(canRentACar);

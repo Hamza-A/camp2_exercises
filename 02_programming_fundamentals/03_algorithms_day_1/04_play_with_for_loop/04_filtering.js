@@ -1,3 +1,7 @@
+const litteralDigits = ["zero","one","two","three","four","five","six","seven","eight","nine"];
+for (let i = 0; i < litteralDigits.length; i=i+2) {
+  console.log(litteralDigits[i]);
+}
 // ## Iteration on arrays with filter
 //
 // -  Create an array called `litteralDigits` from `zero` to `nine` where each array entry is a spelled-out number;
