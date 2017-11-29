@@ -8,7 +8,9 @@
 // Note: The function accepts an integer and returns an integer
 
 function squareDigits(number) {
-  // Your code here
+  const result = Math.pow(number, 2);
+
+  return result;
 }
 
 // Do not remove last lines, it is for tests
