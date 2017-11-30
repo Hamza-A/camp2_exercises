@@ -1,4 +1,30 @@
 // See Sparta courses for the exercise summary
+let machine = {
+  litersOfCoffee: 0,
+
+  expresso: function() {
+    if (this.litersOfCoffee >= 0.08){
+      this.litersOfCoffee = this.litersOfCoffee - 0.08;
+      return true;
+    } else {
+      return false;
+    }
+  },
+
+  longCoffee: function() {
+    if (this.litersOfCoffee >= 0.15) {
+      this.litersOfCoffee = this.litersOfCoffee - 0.15;
+      return true;
+    } else {
+      return false;
+    }
+  },
+
+  fillWithLitersOfCoffee : function(water){
+    this.litersOfCoffee = this.litersOfCoffee + water;
+  },
+
+}
 
 // Coffee Machine usage. Insert your code above this comment
 
