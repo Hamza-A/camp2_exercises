@@ -1,3 +1,6 @@
 node_modules
 /*.result
 /*.weather
+
+*env_vars.dev
+*TW_KEYS.env.var
