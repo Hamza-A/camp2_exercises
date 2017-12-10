@@ -1,16 +1,23 @@
-
-let container = 0;
-
+let container= 0;
 
 function putLitersOfCoffee(numberOfLiters){
-  return container + numberOfLiters;
+  container += numberOfLiters;
+  return container;
 }
+
 
 function consumeLitersOfCoffee(numberOfLiters){
-  return container - numberOfLiters;
+  if (container >= numberOfLiters){
+    container -= numberOfLiters;
+    return true;
+  } else {
+    return false;
+  }
 }
 
+
 module.exports = {
+  container: container,
   putLitersOfCoffee: putLitersOfCoffee,
   consumeLitersOfCoffee: consumeLitersOfCoffee
 };
