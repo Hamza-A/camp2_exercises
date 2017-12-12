@@ -2,30 +2,107 @@
 
 1. Write a query in SQL to display the first name, last name, department number, and department name for each employee.
 
+SELECT
+employee.first_name,
+employee.last_name,
+employee.department_id,
+department.name
+FROM employee
+INNER JOIN department on (employee.department_id = department.id);
+
 2. Write a query in SQL to display the first and last name, department, city, and state province for each employee.
 
+SELECT
+employee.first_name,
+employee.last_name,
+department.name,
+location.city,
+location.state
+FROM employee
+INNER JOIN department on (employee.department_id = department.id)
+INNER JOIN location on (department.location_id = location.id);
+
 3. Write a query in SQL to display the first name, last name, salary, and job grade for all employees.
+
+SELECT
+employee.first_name,
+employee.last_name,
+employee.salary,
+job_grade.level
+FROM employee
+INNER JOIN job_grade ON employee.salary BETWEEN job_grade.lowest_salary AND job_grade.highest_salary;
 
 4. Write a query in SQL to display the first name, last name, department number and department name, for all employees
 for departments 8 or 4.
 
+SELECT
+employee.first_name,
+employee.last_name,
+employee.department_id,
+department.name
+FROM employee
+INNER JOIN department ON employee.department_id = department.id
+WHERE department.id = '4' OR department.id = '8';
+
 5. Write a query in SQL to display those employees who contain a letter z to their first name and also display their
 last name, department, city, and state province.
 
+
+
 6. Write a query in SQL to display all departments including those where does not have any employee.
+
+SELECT name FROM department;
 
 7. Write a query in SQL to display the first and last name and salary for those employees who earn less than the
 employee earn whose number is 83.
 
+SELECT
+first_name,
+last_name,
+salary
+FROM employee
+WHERE salary < (SELECT salary FROM employee
+WHERE id =83);
+
 8. Write a query in SQL to display the first name of all employees including the first name of their manager.
 
+SELECT
+employee.first_name,
+manager.first_name
+FROM employee AS employee
+
+INNER JOIN employee AS manager ON (employee.manager_id = manager.id);
+
 9. Write a query in SQL to display the department name, city, and state province for each department.
+
+SELECT
+name,
+location.city,
+location.state
+FROM department
+INNER JOIN location ON (department.location_id = location.id);
 
 10. Write a query in SQL to display the first name, last name, department number and name, for all employees who have or
 have not any department.
 
+SELECT
+first_name,
+last_name,
+department_id,
+department.name
+FROM employee
+INNER JOIN department ON (employee.department_id = department.id)
+WHERE department_id IS NOT NULL OR department_id IS NULL;
+
 11. Write a query in SQL to display the first name of all employees and the first name of their manager including those
 who does not working under any manager.
+
+SELECT
+employee.first_name,
+manager.first_name
+FROM employee AS employee
+
+LEFT JOIN employee AS manager ON (employee.manager_id = manager.id);
 
 12. Write a query in SQL to display the first name, last name, and department number for those employees who work in the
 same department as the employee who hold the last name as Taylor.
