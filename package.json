@@ -1,0 +1,25 @@
+{
+  "name": "camp2_exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "oauth": "^0.9.15",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hamza-A/camp2_exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hamza-A/camp2_exercises/issues"
+  },
+  "homepage": "https://github.com/Hamza-A/camp2_exercises#readme"
+}
