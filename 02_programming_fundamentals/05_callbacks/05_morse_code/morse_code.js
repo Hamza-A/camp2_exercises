@@ -45,8 +45,15 @@ const MORSE_CODE = {
 };
 
 function decodeMorse(morse) {
-  // Your code here
+  let morseToWords = morse.split("  ");
+  console.log(morseToWords);
+
+  let newSplitedMorse = morseToWords.map(item => MORSE_CODE[item]);
+
+  return console.log(newSplitedMorse.join(""));
 }
+
+decodeMorse(".... . -.--   .--- ..- -.. .");
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line

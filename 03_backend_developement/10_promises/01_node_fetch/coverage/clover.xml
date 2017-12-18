@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1513350658762" clover="3.2.0">
+  <project timestamp="1513350658762" name="All files">
+    <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="7" elements="22" coveredelements="18" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1">
+      <file name="node_fetch.js" path="/Users/Hamza/Workspace/camp2_exercises/03_backend_developement/10_promises/01_node_fetch/node_fetch.js">
+        <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="7"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+      </file>
+    </metrics>
+  </project>
+</coverage>

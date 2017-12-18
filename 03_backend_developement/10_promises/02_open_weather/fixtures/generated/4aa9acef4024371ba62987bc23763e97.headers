@@ -1,0 +1,33 @@
+{
+  "statusCode": 200,
+  "headers": {
+    "server": "openresty",
+    "date": "Fri, 15 Dec 2017 16:24:48 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "439",
+    "connection": "close",
+    "x-cache-key": "/data/2.5/weather?APPID=bac05b2987fe971de74b44d4807542d1&q=london&units=metric",
+    "access-control-allow-origin": "*",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-methods": "GET, POST"
+  },
+  "url": "http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=bac05b2987fe971de74b44d4807542d1",
+  "time": 169,
+  "request": {
+    "method": "GET",
+    "headers": {
+      "accept-encoding": [
+        "gzip,deflate"
+      ],
+      "user-agent": [
+        "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
+      ],
+      "connection": [
+        "close"
+      ],
+      "accept": [
+        "*/*"
+      ]
+    }
+  }
+}
