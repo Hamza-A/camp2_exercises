@@ -45,12 +45,22 @@ const MORSE_CODE = {
 };
 
 function decodeMorse(morse) {
+  getWords(morse);
+
+  // let newSplitedMorse = morseToWords.map(item => MORSE_CODE[item]);
+
+  // return (newSplitedMorse.join(""));
+}
+
+function getWords(morse){
   let morseToWords = morse.split("  ");
-  console.log(morseToWords);
+  getLetters(morseToWords);
+  return console.log(morseToWords.toString());
+}
 
-  let newSplitedMorse = morseToWords.map(item => MORSE_CODE[item]);
-
-  return console.log(newSplitedMorse.join(""));
+function getLetters(code){
+  let letters = code.split(" ");
+  return letters;
 }
 
 decodeMorse(".... . -.--   .--- ..- -.. .");
