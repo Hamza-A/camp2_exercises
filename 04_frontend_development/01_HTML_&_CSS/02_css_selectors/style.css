@@ -1,0 +1,15 @@
+table tr:nth-child(even){
+  background-color: blue;
+}
+
+.important{
+  font-weight: bold;
+}
+
+.emphasis{
+  font-style: italic;
+}
+
+.important.emphasis{
+  color: rgb(255, 0, 0);
+}
