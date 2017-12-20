@@ -34,7 +34,31 @@
     </div>
     <script src="./departments.js"></script>
     <script>
-      // Your code here
+    document.getElementById("search-department").addEventListener("input", function() {
+      const filterDepartments = DEPARTMENTS.filter(department => department.includes(this.value.toUpperCase()));
+      displayDepartments(filterDepartments);
+});
+      displayDepartments(DEPARTMENTS);
     </script>
   </body>
 </html>
+
+<!-- function displayDepartments (departmentsArray) {
+      const nodeDepartmentList = document.getElementById("department-list");
+      const htmlText = departmentsArray.map(department => `<li>${department}</li>`).join("");
+      nodeDepartmentList.innerHTML=htmlText;
+    }
+
+    displayDepartments(DEPARTMENTS);
+
+    const searchInput = document.getElementById("search-department");
+    searchInput.addEventListener("input", function() {
+      console.log(searchInput.value);
+      const filteredDepartments = DEPARTMENTS.filter(
+        function (department) {
+          return department.toLowerCase().includes(
+            searchInput.value.toLowerCase()
+          )
+        });
+      displayDepartments(filteredDepartments);
+    }); -->

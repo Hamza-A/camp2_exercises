@@ -102,6 +102,8 @@ const DEPARTMENTS = [
   "RÉUNION"
 ];
 
+
+
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
   module.exports = DEPARTMENTS;
 }

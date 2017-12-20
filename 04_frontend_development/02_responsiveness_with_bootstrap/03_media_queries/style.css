@@ -1,0 +1,20 @@
+.background {
+  background-image: url("./charmander.png");
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+}
+
+@media (max-width: 800px){
+  .background {
+    background-image: url("./charmeleon.png");
+  }
+
+}
+
+@media (max-width: 1200px){
+  .background {
+    background-image: url("./charizard.png");
+  }
+
+}
