@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.16.2",
+    "node-fetch": "^1.7.3",
     "oauth": "^0.9.15",
     "request": "^2.83.0"
   },
