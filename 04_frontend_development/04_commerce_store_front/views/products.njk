@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    {% for object in products %}
+    <div class="card" style="width: 20rem;" id={{object.id}}>
+    <img class="card-img-top" src="https://www.decathlon.fr/media/{{object.image_path}}" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">{{object.title}}</h4>
+      <p class="card-text">{{object.decathlon_id}}</p>
+      <p class="card-text">{{object.min_price}}€</p>
+      <a href="http://localhost:3000/products/{{object.id}}" class="btn btn-primary">Ajouter au panier</a>
+    </div>
+  </div>
+    {% endfor %}
+
+<script>
+{% for object in products %}
+  document.getElementById("{{object.id}}").addEventListener("click", () => {
+    window.location = "http://localhost:3000/products/{{object.id}}";
+  });
+{% endfor %}
+</script>
+{% endblock %}
