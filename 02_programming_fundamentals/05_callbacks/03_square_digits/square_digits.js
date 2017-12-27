@@ -8,10 +8,14 @@
 // Note: The function accepts an integer and returns an integer
 
 function squareDigits(number) {
-  const result = Math.pow(number, 2);
+  const spliting = number.toString().split("");
+  const result = spliting.map(number => Math.pow(number, 2));
 
-  return result;
+  return parseInt(result.join(""));
 }
+
+
+console.log(squareDigits(23));
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
