@@ -44,26 +44,51 @@ const MORSE_CODE = {
   "----.": "9"
 };
 
-function decodeMorse(morse) {
-  getWords(morse);
-
-  // let newSplitedMorse = morseToWords.map(item => MORSE_CODE[item]);
-
-  // return (newSplitedMorse.join(""));
+function decodeMorse(morseCode) {
+  let words= morseCode.split("  ");
+  return console.log(words.map(word => manageWord(word)).join(" "));
 }
 
-function getWords(morse){
-  let morseToWords = morse.split("  ");
-  getLetters(morseToWords);
-  return console.log(morseToWords.toString());
+function manageWord(word){
+  return word.split(" ");
 }
-
-function getLetters(code){
-  let letters = code.split(" ");
-  return letters;
-}
+// //
+// function getLetters(morseToWords){
+//   let letters = morseToWords.split(" ");
+//   getDecodedMorse(letters);
+//   return console.log(letters);
+// }
+//
+// function getDecodedMorse(letters){
+//   let decodedLetters= letters.map(item => MORSE_CODE[item]).join("");
+//   return console.log(decodedLetters);
+// }
 
 decodeMorse(".... . -.--   .--- ..- -.. .");
+
+// Correction de Damien
+// function decodeMorse(morse) {
+//   const morseSplittedInWordsinAnArray = morse.split("   ");
+//
+//   return console.log(morseSplittedInWordsinAnArray
+//     .map((word) => manageWord(word))
+//     .join(" "));
+// }
+//
+// function manageWord (text) {
+//
+//   const wordInMorseToArray = text.split(" ");
+//   return wordInMorseToArray
+//     .map((letter) => getLetterFromKey(letter))
+//     .join("");
+// }
+//
+//
+// function getLetterFromKey(text) {
+//   return MORSE_CODE[text];
+// }
+
+
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
