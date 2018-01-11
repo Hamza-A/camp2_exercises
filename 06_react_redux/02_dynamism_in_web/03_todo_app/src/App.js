@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import DisplayList from './displayList';
+import DisplayList from './DisplayList';
 
 class App extends Component {
   constructor(props){
@@ -10,6 +10,25 @@ class App extends Component {
       value: ""
     }
   }
+
+  isCheck=(myTask, event)=>{
+    let myTab = this.state.myList;
+    let myIndex = myTab.indexOf(myTask);
+
+    myTab.splice(myIndex, 1);
+    myTab.splice(myIndex, 0, {name: myTask.name, checked: !myTask.checked});
+    this.setState({myList: myTab});
+  }
+
+  handleDelete=(myTask, event)=>{
+    let myTab = this.state.myList;
+    let myIndex = myTab.indexOf(myTask);
+
+    myTab.splice(myIndex, 1);
+    this.setState({myList: myTab});
+
+  }
+
 
   handleChange=(event) => {
     this.setState({value: event.target.value});
@@ -31,7 +50,7 @@ class App extends Component {
           <input type="submit" value="add"></input>
         </form>
         <div>
-         <DisplayList myList={this.state.myList}/>
+         <DisplayList myList={this.state.myList} isCheck={this.isCheck} handleDelete={this.handleDelete}/>
         </div>
       </div>
     );
