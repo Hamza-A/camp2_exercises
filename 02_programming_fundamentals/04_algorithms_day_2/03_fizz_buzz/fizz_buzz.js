@@ -9,8 +9,22 @@
 */
 
 function fizzBuzz(list) {
-
+  let newList = [];
+  for (let i = 0; i < list.length; i ++){
+    if ((list[i] % 3 === 0) && (list[i] % 5 === 0)){
+      newList.push("FizzBuzz");
+    } else if (list[i] % 3 === 0) {
+      newList.push("Fizz");
+    } else if (list[i] % 5 === 0) {
+      newList.push("Buzz");
+    } else {
+      newList.push(list[i]);
+    }
+  }
+  return newList;
 }
+
+console.log(fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]));
 
 
 module.exports = fizzBuzz;
