@@ -11,4 +11,4 @@ const first = digits[0]; // create a constant called `first` for the first cell 
 const last = digits[9]; // create a constant called `last` for the last cell of your array;
 
 
-const sixth = digits[5]; // create a constant called `sixth` for the cell at the index 6 of your array;
+const sixth = digits[6]; // create a constant called `sixth` for the cell at the index 6 of your array;
