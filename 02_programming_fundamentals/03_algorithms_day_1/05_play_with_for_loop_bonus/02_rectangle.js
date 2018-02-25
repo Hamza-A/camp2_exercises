@@ -17,8 +17,7 @@ let result = "";
 for (let i = 0; i < 10; i++){
   result= result + "*";
 }
-console.log(result);
 
-for (let i = 0; i < 9; i++){
+for (let i = 0; i < 10; i++){
   console.log(result);
 }
