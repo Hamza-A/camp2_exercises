@@ -4,8 +4,8 @@
 // -  Using `length`, write on `stdout` each odd values of the table.
 const litteralDigits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
 
-let i= 0;
+let i = 1;
 while (i < litteralDigits.length) {
   console.log(litteralDigits[i]);
-  i = i+2;
+  i = i + 2;
 }

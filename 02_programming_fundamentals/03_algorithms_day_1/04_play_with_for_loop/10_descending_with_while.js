@@ -4,8 +4,8 @@
 
 const litteralDigits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
 
-let i= litteralDigits.length;
+let i= litteralDigits.length - 1;
 while (i >= 0) {
-  i--;
   console.log(litteralDigits[i]);
+  i--;
 }
