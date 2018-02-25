@@ -3,16 +3,16 @@
 
 // Your code here...
 function double(listOfNumber){
-  let newList = "";
+  let newList = [];
   for (let i = 0; i < listOfNumber.length; i++){
-    newList = listOfNumber[i] * 2;
+    newList.push(listOfNumber[i] * 2);
   }
 
   return newList;
 }
 
 
-double([1, 2, 3, 4]);
+console.log(double([1, 2, 3, 4]));
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line

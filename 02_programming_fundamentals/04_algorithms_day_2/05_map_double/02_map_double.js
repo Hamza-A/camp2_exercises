@@ -11,7 +11,19 @@
 // WARNING: You're not allowed to use `Array.map`!
 
 // Your code here...
+function double(integer){
+  return integer * 2;
+}
 
+function map(array, fnc){
+  let newArray = [];
+  for (let i = 0; i < array.length; i++){
+    newArray.push(fnc(array[i]));
+  }
+  return newArray;
+}
+
+console.log(map([1, 2, 3, 4], double));
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
 module.exports = { double: double, map: map };
