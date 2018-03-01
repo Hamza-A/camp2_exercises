@@ -1,5 +1,4 @@
 const queries = require("./queries");
-
 const express = require("express");
 const app = express();
 
@@ -71,32 +70,3 @@ app.get(
     queries.getProductsFromACategory(id, table, result);
   }
 );
-
-
-
-/*
-function searchMoviesByTitle(title, callback) {
-  const client = new PG.Client();
-  client.connect();
-  client.query(
-    "SELECT * FROM movies WHERE title = $1::text",
-    [title],
-    function(error, resultQuery) {
-      callback(resultQuery.rows);
-      client.end();
-    }
-  );
-}
-
-app.get(
-  "/movies/:title",
-  function(request, result) {
-    searchMoviesByTitle(
-      request.params.title,
-      function(movies) {
-        result.json(movies);
-      }
-    );
-  }
-);
-*/

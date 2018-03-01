@@ -11,13 +11,15 @@ function weatherByCity(city){
 
     function(error, response, result) {
       const json= JSON.parse(result);
-      console.log(`${json.main.temp} °C`);
+      console.log(`Temperature in ${json.name} is ${json.main.temp}°C`);
       return `${json.main.temp} °C`;
 
     }
 
   );
 }
+
+weatherByCity("Paris");
 
 
 module.exports = weatherByCity;
