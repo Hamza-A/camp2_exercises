@@ -8,25 +8,11 @@
 //     *
 // ```
 
-for (let nbEspaces= 0; nbEspaces < 5; nbEspaces++){
-  const nbEtoiles = 5 - nbEspaces;
-  let result = "";
-  for(let j = 0; j < nbEspaces; j++) {
-    result = result + " ";
-  }
-  for(let j = 0; j < nbEtoiles; j++) {
-    result = result + "*";
-  }
-  console.log(result);
-}
+let line = ["*", "*", "*", "*", "*",];
 
-/*const stuff = ["*", "*", "*", "*", "*"];
-const high = 5;
+console.log(line.join(""));
 
-for(let i = 0; i < high; i++) {
-  const gauche = stuff.slice(high - i).map((n) => " ");
-  const droite = stuff.slice(i);
-  const line = gauche.join("") + droite.join("");
-  console.log(line);
+for (let i = 0; i < 4; i++){
+  line.splice(i, 1, " ");
+  console.log(line.join(""));
 }
-*/
