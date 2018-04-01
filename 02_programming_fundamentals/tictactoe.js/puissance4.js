@@ -114,7 +114,7 @@ function isWinningColumn(board){
 
 function isWinningRightDiagonal(board){
   for (let i = 1; i < 4; i++){
-    for (let j = 0; j < 2; j++){
+    for (let j = 0; j < 4; j++){
       const pattern = `${board[i][j]}${board[i + 1][j + 1]}${board[i + 2][j + 2]}${board[i + 3][j + 3]}`;
       if (pattern === "XXXX" || pattern === "OOOO"){
         return true;
@@ -125,7 +125,7 @@ function isWinningRightDiagonal(board){
 
 function isWinningLeftDiagonal(board){
   for (let i = 1; i < 4; i++){
-    for (let j = 4; j > 2; j --){
+    for (let j = 6; j > 2; j --){
       const pattern = `${board[i][j]}${board[i + 1][j - 1]}${board[i + 2][j - 2]}${board[i + 3][j - 3]}`;
       if (pattern === "XXXX" || pattern === "OOOO"){
         return true;
