@@ -8,19 +8,32 @@ const reader = readline.createInterface({
 });
 
 const cards = ["🐰", "🐰", "🎃", "🎃", "🌲","🌲"];
+let firstCard;
+let secondCard;
 
-function check(firstInput, secondInput){
-  const firstCard = cards[firstInput];
-  const secondCard = cards[secondInput];
-
-  if (firstCard === secondCard){
-    console.log(firstCard + "  " + secondCard);
-    console.log("its a match!");
-  } else {
-    console.log(firstCard + "  " + secondCard);
-    console.log("try again!");
-  }
-  reader.close();
+function checkFirstDigit(firstInput){
+  firstCard = cards[firstInput];
+  console.log(firstCard);
+  reader.question("Select a second digit between 0 and 5\n", checkSecondDigit);
+  return firstCard;
 }
 
-check(0, 3);
+function checkSecondDigit(secondInput){
+  secondCard = cards[secondInput];
+  console.log(secondCard);
+  finalCheck();
+  return cards[secondInput];
+}
+
+function finalCheck(){
+  if (firstCard === secondCard){
+    console.log("It's a match!");
+    reader.close();
+  } else {
+    clear();
+    console.log("Try again");
+    reader.question("Select one digit between 0 and 5\n", checkFirstDigit);
+  }
+}
+
+reader.question("Select one digit between 0 and 5\n", checkFirstDigit);
