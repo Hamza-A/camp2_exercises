@@ -17,7 +17,7 @@ WHERE last_name = 'McEwen';
 
 4. Write a query in SQL to display all the information for all employees without any department number.
 
-
+SELECT * FROM employee WHERE department_id IS NULL;
 
 5. Write a query in SQL to display all the information about the department Marketing.
 
@@ -34,8 +34,11 @@ WHERE first_name NOT LIKE 'M%';
 7. Write a query in SQL to display all the information of employees whose salary is in the range of 8000 and 12000 and
 commission is not null or department number is except the number 4, 12 and 7 and they have been hired before June
 5th, 1987.
-
-
+SELECT * FROM employee
+WHERE salary > 8000
+AND salary < 12000
+AND department_id IN (4, 7, 12)
+AND hire_date > '1987-06-05';
 
 8. Write a query in SQL to display the full name (first and last name), and salary for all employees who does not earn
 any commission.
@@ -46,7 +49,7 @@ any commission.
 salary, for those employees whose salary is within the range of 9000 and 17000. The column headings assign with
 Full_Name, Contact_Details and Remuneration respectively.
 
-SELECT CONCAT(first_name, ' ', last_name), CONCAT(phone_number, ' - ', email), salary FROM employee
+SELECT CONCAT(first_name, ' ', last_name), CONCAT(phone_number, ' - ', email) AS full_name, salary FROM employee
 WHERE salary BETWEEN '9000' AND '17000';
 
 10. Write a query in SQL to display the first and last name, and salary for those employees whose first name is ending

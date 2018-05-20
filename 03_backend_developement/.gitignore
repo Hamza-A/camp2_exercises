@@ -1,1 +1,5 @@
 01_weather_by_city_test
+getDataTest.js
+.env.var.test
+server_test.js
+queries_test.js

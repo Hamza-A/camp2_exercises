@@ -13,7 +13,7 @@ const person = {
   introduceMyself: function() {
     return `Hello! I'm ${this.fullname()} and I'm ${this.age}`;
   }
-}
+};
 
 console.log(person.introduceMyself());
 

@@ -1,0 +1,53 @@
+<!doctype html>
+      <html lang="en">
+        <head>
+          <!-- Required meta tags -->
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+          <!-- Bootstrap CSS -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+          <title>Weathertum</title>
+
+        </head>
+        <body>
+
+
+            <h1>Which city do you want the temperature for?</h1>
+
+            <div class="principal">
+              <form class="form-inline my-2 my-lg-0">
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <a id="button" class="btn btn-info">Go</a>
+              </form>
+            </div>
+
+          <script>
+            const searchInput = document.getElementById("searchInput");
+            const button = document.getElementById("button");
+            button.addEventListener("click", function(event){
+              window.location.href = 'http://localhost:3000/weather/' + searchInput.value;
+            });
+          </script>
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+        </body>
+      </html>
+      <style>
+        body {
+          background-image : url("https://images.unsplash.com/photo-1521071463761-fa7eb8a57fc3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2bc2b01a8076aa9795821ac17044b518&auto=format&fit=crop&w=1567&q=80");
+        }
+
+        h1 {
+          text-align : center;
+          color : white;
+          margin-top : 250px;
+        }
+
+        .principal {
+          margin-left : 600px;
+        }
+      </style>

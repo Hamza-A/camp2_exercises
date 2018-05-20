@@ -47,7 +47,11 @@ WHERE department.id = '4' OR department.id = '8';
 5. Write a query in SQL to display those employees who contain a letter z to their first name and also display their
 last name, department, city, and state province.
 
-
+SELECT employee.first_name, employee.last_name, name, location.city, location.state
+FROM department
+INNER JOIN employee ON (employee.department_id = department.id)
+INNER JOIN location ON (department.location_id = location.id)
+WHERE employee.first_name LIKE '%z%' OR employee.first_name LIKE 'Z%' OR employee.first_name LIKE '%z';
 
 6. Write a query in SQL to display all departments including those where does not have any employee.
 
@@ -107,14 +111,33 @@ LEFT JOIN employee AS manager ON (employee.manager_id = manager.id);
 12. Write a query in SQL to display the first name, last name, and department number for those employees who work in the
 same department as the employee who hold the last name as Taylor.
 
+SELECT first_name, last_name, department_id
+FROM employee
+WHERE department_id IN (SELECT department_id FROM employee WHERE last_name = 'Taylor');
+
 13. Write a query in SQL to display the job title, department name, full name (first and last name ) of employee, and
 starting date for all the jobs which started on or after 1st January, 1993 and ending with on or before 31 August, 1997.
+
+SELECT job.title, d.name, CONCAT (e.first_name, ' ', e.last_name) AS full_name, e.hire_date
+FROM employee e
+INNER JOIN job ON (e.job_id = job.id)
+INNER JOIN department d ON (e.department_id = d.id)
+WHERE hire_date BETWEEN '1993-01-01' AND '1997-08-31';
 
 14. Write a query in SQL to display job title, full name (first and last name ) of employee, and the difference between
 maximum salary for the job and salary of the employee.
 
+SELECT job.title, CONCAT (e.first_name, ' ', e.last_name) AS full_name, e.salary - (SELECT MAX (salary) FROM employee)
+FROM employee e
+INNER JOIN job ON (e.job_id = job.id);
+
 15. Write a query in SQL to display the name of the department, average salary and number of employees working in that
 department who got commission.
+
+SELECT COUNT (étoile), AVG(salary), department.name
+FROM employee
+INNER JOIN department ON (department.id = employee.department_id)
+GROUP BY department.name;
 
 16. Write a query in SQL to display the full name (first and last name ) of employee, and job title of those employees
 who is working in the department which ID is 8.

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import DisplayList from './DisplayList';
+import DisplayList from './displayList';
 
 class App extends Component {
   constructor(props){
@@ -46,7 +46,7 @@ class App extends Component {
         <form onSubmit={this.handleSubmit}>
         <h3> What do you want to keep in mind? </h3>
           <input type="text" id="task" onChange={this.handleChange}></input>
-          <input type="submit" value="add"></input>
+          <button type="submit" value="add">Add</button>
         </form>
         <div>
          <DisplayList myList={this.state.myList} isCheck={this.isCheck} handleDelete={this.handleDelete}/>
